@@ -1,14 +1,7 @@
-let students = 31;
+let username;
 
-/*
- addition = + 
-subtraction = -
-multiplication = *
-division = /
-powering = **
-getting the rest = %
-*/
-let extraS = students % 3;
-
-console.log(students + 1);
-console.log(extraS);
+document.getElementById("mySubmit").onclick = function () {
+  username = document.getElementById("myText").value;
+  console.log(username);
+  document.getElementById("myH1").textContent = `Hello ${username}`;
+};
