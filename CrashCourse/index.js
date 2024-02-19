@@ -1,21 +1,11 @@
-const dec = document.getElementById("dec");
-const reset = document.getElementById("reset");
-const inc = document.getElementById("increase");
+let numbers = [1,2,3,4,5,6];
 
-const countLabel = document.getElementById("countLabel");
-let count = 0;
-
-inc.onclick = function () {
-  count++;
-  countLabel.textContent = count;
-};
-
-dec.onclick = function () {
-  count--;
-  countLabel.textContent = count;
-};
-
-reset.onclick = function () {
-  count = 0;
-  countLabel.textContent = count;
-};
+const squares = numbers.map((a) => Math.pow(a,2));
+let bigSquares = squares.filter((element)=> element>=10);
+let majorSquare = bigSquares.reduce((a,b)=>(a>b===true ? a : b));
+let total = numbers.reduce((a,b)=> a+b);
+let totalSquares = squares.reduce((a,b)=>a+b);
+console.log(total);
+console.log(totalSquares);
+console.log(bigSquares)
+console.log(majorSquare);
