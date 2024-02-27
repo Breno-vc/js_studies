@@ -1,11 +1,10 @@
-let numbers = [1,2,3,4,5,6];
-
-const squares = numbers.map((a) => Math.pow(a,2));
-let bigSquares = squares.filter((element)=> element>=10);
-let majorSquare = bigSquares.reduce((a,b)=>(a>b===true ? a : b));
-let total = numbers.reduce((a,b)=> a+b);
-let totalSquares = squares.reduce((a,b)=>a+b);
-console.log(total);
-console.log(totalSquares);
-console.log(bigSquares)
-console.log(majorSquare);
+function updateClock() {
+const now = new Date();
+const hours = now.getHours().toString().padStart(2,0);
+const minutes = now.getMinutes().toString().padStart(2,0);
+const seconds = now.getSeconds().toString().padStart(2,0);
+const timeString = `${hours}:${minutes}:${seconds}`;
+document.getElementById("clock").textContent = timeString;
+setInterval(updateClock,1000);
+}
+updateClock();

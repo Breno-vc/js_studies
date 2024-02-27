@@ -1,23 +1,26 @@
-#countLabel {
-  display: block;
-  text-align: center;
-  font-size: 5em;
-  font-family: Helvetica, sans-serif;
+body {
+background-image: url(foto_relogio.avif);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+margin: 0px;
 }
-#btnContainer {
-  text-align: center;
+
+#clock-container {
+display: flex;
+height: 100vh;
+justify-content: center;
+align-items: center;
 }
-.buttons {
-  padding: 10px 20px;
-  font-size: 1.5em;
-  font-family: Helvetica, sans-serif;
-  background-color: aliceblue;
-  border-radius: 80px;
-  border-color: black;
-  cursor: pointer;
-  color: black;
-  transition: background-color 0.35s;
-}
-.buttons:hover {
-  background-color: rgb(131, 192, 245);
+
+#clock {
+font-family: monospace;
+font-size: 4em;
+font-weight: bold;
+color: white;
+border-radius: 10px;
+backdrop-filter: blur(1.5px);
+width: 100%;
+text-align: center;
+
 }
